@@ -1,6 +1,5 @@
 import axios from "axios";
-import $ from 'jquery';
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 
 
@@ -16,17 +15,7 @@ const ComOne = () => {
         axios.get('data.json')
             .then((res) => {
                 let ufos = res.data.length;
-
-                var year21 = new Date(res.data[136460].posted);
-                var year = year21.getYear(); // returns 95
-
-                console.log(res.data[136460].date_time);
-                console.log(year);
                 setUfos(ufos);
-
-
-
-
             })
     });
 
@@ -52,7 +41,7 @@ const ComOne = () => {
             <div className="row">
                 <div className='col-12 bgimage'>
                     <h1 className='col-12 welcome-heading'>Welcome To Alien Spotter</h1>
-                    <p className='col-6 page-info'>Here you'll get the latest information on sightings of unidetified flying objects across the globe.</p>
+                    <p className='col-6 page-info'>Here you'll get 2020-2021 information on sightings of unidetified flying objects across the globe.</p>
                     <h2 className="data-info">Over {ufos} Sightings</h2>
                     <div className="story-container">
                         <h4 className="story-heading">Random Sighting Details</h4>
