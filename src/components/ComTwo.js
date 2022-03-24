@@ -11,6 +11,7 @@ const ComTwo = () => {
     const [triangle, setTriangle] = useState("");
     const [fireball, setFireball] = useState("");
     const [sphere, setSphere] = useState("");
+    const [light, setLight] = useState("");
 
 
 
@@ -19,35 +20,47 @@ const ComTwo = () => {
         axios.get('data.json')
             .then((res) => {
 
-                // var year21 = new Date(res.data[1].posted);
-                // var year = year21.getYear(21); // returns 95
+                // Dates 
+                var dateSnip = res.data[1].stats;
+                dateSnip = dateSnip.slice(19, 21);
+                console.log(dateSnip);
 
-                // for(let i = 0; i < res.length; i++){
-                //     if(res.data[i].posted === individualName){
-                //     }
-                // }
+
+                // Shapes 
+                let triangleData = 0;
+                let fireballData = 0;
+                let sphereData = 0;
+                let lightData = 0;
 
 
                 for (let i = 0; i < res.data.length; i++) {
                     if (res.data[i].shape === "Triangle") {
-                        let triangle = i;
-                        setTriangle(triangle.length);
+                        triangleData = triangleData + 1;
                         // console.log(triangle.length);
                     }
-
+                    
                     if (res.data[i].shape === "Fireball") {
-                        let fireball = i;
-                        setFireball(fireball.length);
+                        fireballData = fireballData + 1;
+                        // console.log(triangle.length);
+                    }
+                    
+                    if (res.data[i].shape === "Sphere") {
+                        sphereData = sphereData + 1;
                         // console.log(triangle.length);
                     }
 
-                    if (res.data[i].shape === "Sphere") {
-                        let sphere = i;
-                        setSphere(sphere.length);
+                    if (res.data[i].shape === "Light") {
+                        lightData = lightData + 1;
                         // console.log(triangle.length);
                     }
                 }
 
+
+                setSphere(sphereData);
+                setFireball(fireballData);
+                setTriangle(triangleData);
+                setLight(lightData);
+                
 
                 let sightings = res.data.length;
 
@@ -70,15 +83,15 @@ const ComTwo = () => {
                 <div className="exCon chart">
                     <Pie
                         data={{
-                            labels: ['Triangle', 'Fireball', 'Sphere', 'Light', '2016', '2015'],
+                            labels: ['Triangle', 'Fireball', 'Sphere', 'Light'],
                             datasets: [{
                                 label: '# of Sightings',
-                                data: [triangle, fireball, sphere],
+                                data: [triangle, fireball, sphere, light],
                                 backgroundColor: [
                                     'rgba(255, 99, 132, 0.2)',
                                     'rgba(54, 162, 235, 0.2)',
                                     'rgba(255, 206, 86, 0.2)',
-                                    // 'rgba(75, 192, 192, 0.2)',
+                                    'rgba(75, 192, 192, 0.2)',
                                     // 'rgba(153, 102, 255, 0.2)',
                                     // 'rgba(255, 159, 64, 0.2)'
                                 ],
