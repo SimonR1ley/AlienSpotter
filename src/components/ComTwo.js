@@ -7,12 +7,14 @@ import axios from 'axios';
 const ComTwo = () => {
 
 
-    const [sightings16, setSightings16] = useState("undefined");
     const [sightings17, setSightings17] = useState("undefined");
     const [sightings18, setSightings18] = useState("undefined");
     const [sightings19, setSightings19] = useState("undefined");
     const [sightings20, setSightings20] = useState("undefined");
     const [sightings21, setSightings21] = useState("undefined");
+    const [sightings22, setSightings22] = useState("undefined");
+
+
     const [triangle, setTriangle] = useState("");
     const [fireball, setFireball] = useState("");
     const [sphere, setSphere] = useState("");
@@ -28,12 +30,12 @@ const ComTwo = () => {
 
 
                 // Dates 
-                let sightingData16 = 0;
                 let sightingData17 = 0;
                 let sightingData18 = 0;
                 let sightingData19 = 0;
                 let sightingData20 = 0;
                 let sightingData21 = 0;
+                let sightingData22 = 0;
 
                 for (let i = 0; i < res.data.length; i++) {
 
@@ -41,6 +43,9 @@ const ComTwo = () => {
                     var year = dateSnip.getFullYear();
 
                     // console.log(year);
+                    if (year === 2022) {
+                        sightingData22 = sightingData22 + 1;
+                    }
 
                     if (year === 2020) {
                         sightingData20 = sightingData20 + 1;
@@ -62,9 +67,6 @@ const ComTwo = () => {
                         sightingData17 = sightingData17 + 1;
                     }
 
-                    if (year === 2016) {
-                        sightingData16 = sightingData16 + 1;
-                    }
 
 
 
@@ -74,12 +76,12 @@ const ComTwo = () => {
                 // console.log(sightingData19);
                 // console.log(sightingData20);
                 // console.log(sightingData21);
-                setSightings21(sightingData16);
-                setSightings21(sightingData17);
-                setSightings21(sightingData18);
+                setSightings17(sightingData17);
+                setSightings18(sightingData18);
                 setSightings19(sightingData19);
                 setSightings20(sightingData20);
                 setSightings21(sightingData21);
+                setSightings22(sightingData22);
 
 
 
@@ -132,17 +134,17 @@ const ComTwo = () => {
                 <h3 className='graph1-heading'>Most Seen UFO Shapes:</h3>
 
                 <div className="exCon chart">
-                    <Pie
+                    <Bar
                         data={{
                             labels: ['Triangle', 'Fireball', 'Sphere', 'Light'],
                             datasets: [{
                                 label: '# of Sightings',
                                 data: [triangle, fireball, sphere, light],
                                 backgroundColor: [
-                                    'rgba(255, 99, 132, 0.2)',
-                                    'rgba(54, 162, 235, 0.2)',
-                                    'rgba(255, 206, 86, 0.2)',
-                                    'rgba(75, 192, 192, 0.2)',
+                                    '#FC6161',
+                                    '#82E26A',
+                                    '#EEE85C',
+                                    '#4DCEEA',
                                     // 'rgba(153, 102, 255, 0.2)',
                                     // 'rgba(255, 159, 64, 0.2)'
                                 ],
@@ -172,19 +174,19 @@ const ComTwo = () => {
                 <h3 className='graph1-heading'>Sightings in the last 6 years:</h3>
 
                 <div className="exCon chart">
-                    <Bar
+                    <Pie
                         data={{
-                            labels: ['2021', '2020', '2019', '2018', '2017', '2016'],
+                            labels: ['2022', '2021', '2020', '2019', '2018', '2017'],
                             datasets: [{
                                 label: '# of Sightings',
-                                data: [sightings21, sightings20, sightings19, sightings18, sightings17, sightings16],
+                                data: [sightings22, sightings21, sightings20, sightings19, sightings18, sightings17],
                                 backgroundColor: [
-                                    'rgba(255, 99, 132, 0.2)',
-                                    'rgba(54, 162, 235, 0.2)',
-                                    'rgba(255, 206, 86, 0.2)',
-                                    'rgba(75, 192, 192, 0.2)',
-                                    'rgba(153, 102, 255, 0.2)',
-                                    'rgba(255, 159, 64, 0.2)'
+                                    '#FC6161',
+                                    '#4DCEEA',
+                                    '#EEE85C',
+                                    '#82E26A',
+                                    '#E15CF6',
+                                    '#F6945C'
                                 ],
                                 borderColor: [
                                     'rgba(255, 99, 132, 1)',
@@ -212,22 +214,22 @@ const ComTwo = () => {
 
 
             <div className='row'>
-                <h3 className='graph1-heading'>Sightings in the last 5 years:</h3>
+                <h3 className='graph1-heading'>Sightings in the last 6 years:</h3>
 
                 <div className="exCon chart">
                     <Radar
                         data={{
-                            labels: ['2020', '2019', '2018', '2017', '2016', '2015'],
+                            labels: ['2022', '2021', '2020', '2019', '2018', '2017'],
                             datasets: [{
                                 label: '# of Sightings',
-                                data: [25, 19, 3, 5, 2, 3],
+                                data: [sightings22, sightings21, sightings20, sightings19, sightings18, sightings17],
                                 backgroundColor: [
-                                    'rgba(255, 99, 132, 0.2)',
-                                    'rgba(54, 162, 235, 0.2)',
-                                    'rgba(255, 206, 86, 0.2)',
-                                    'rgba(75, 192, 192, 0.2)',
-                                    'rgba(153, 102, 255, 0.2)',
-                                    'rgba(255, 159, 64, 0.2)'
+                                    '#FC6161',
+                                    '#4DCEEA',
+                                    '#EEE85C',
+                                    '#82E26A',
+                                    '#E15CF6',
+                                    '#F6945C'
                                 ],
                                 borderColor: [
                                     'rgba(255, 99, 132, 1)',

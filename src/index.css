@@ -110,9 +110,16 @@ li{
   margin: 0 auto;
 }
 
-.data-info{
+.page-info2{
   text-align: center;
   padding-top: 5vh;
+  color: white;
+  margin: 0 auto;
+}
+
+.data-info{
+  text-align: center;
+  padding-top: 20vh;
   color: white;
 }
 
@@ -122,9 +129,15 @@ li{
   background-color: #F7f7f7;
 }
 
+.componentInterior3{
+  width: 100%;
+  height: 150vh;
+  background-color: #F7f7f7;
+}
+
 .exCon{
   margin-top: 50px;
-  background-color: #ffffffaf;
+  background-color: #ffffff0e;
   color: white;
 }
 
@@ -185,4 +198,31 @@ h3{
 
 body{
 background-color: rgb(34, 34, 34);
+}
+
+.pgThree{
+  margin-bottom: 8vh;
+}
+
+.input-con{
+  width: 30%;
+  height: 15vh;
+  border-radius: 10px;
+  background-color: #f7f7f7a1;
+  margin: 0 auto;
+  /* padding-top: 8vh; */
+}
+
+.time-input{
+  position: relative;
+  display: block;
+  margin : 0 auto;
+  /* padding-top: 10px; */
+  text-align: center;
+}
+
+.input-date{
+  text-align: center;
+  padding-top: 1vh;
+  margin-bottom: 2vh;
 }

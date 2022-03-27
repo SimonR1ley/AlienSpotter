@@ -1,12 +1,17 @@
 import 'chart.js/auto';
 import React from "react";
-import { Bar, Line, Pie } from 'react-chartjs-2';
-import { useEffect, useRef, useState } from "react";
+import {Line} from 'react-chartjs-2';
+import { useEffect, useState } from "react";
 import axios from 'axios';
 
 const ComThree = () => {
 
 
+    const [sighting1950, setSighting1950] = useState("undefined");
+    const [sighting1960, setSighting1960] = useState("undefined");
+    const [sighting1980, setSighting1980] = useState("undefined");
+    const [sightings, setSightings] = useState("undefined");
+    const [userInput, setUserInput] = useState("undefined");
 
 
     useEffect(() => {
@@ -14,24 +19,45 @@ const ComThree = () => {
         axios.get('data.json')
             .then((res) => {
 
-        
+                let sightingData = 0;
+                let sightingData1950 = 0;
+                let sightingData1960 = 0;
+                let sightingData1980 = 0;
+                // var inputYear = 
 
 
                 for (let i = 0; i < res.data.length; i++) {
-                    if (res.data[i].date === "") {
-                        // let triangle = i;
-                        // setTriangle(triangle.length);
-                        // console.log(triangle.length);
+
+                    var dateSnip = new Date(res.data[i].date_time);
+                    var year = dateSnip.getFullYear();
+
+                    // console.log(year);
+
+                    if (year === parseInt(userInput)) {
+                        sightingData = sightingData + 1;
                     }
 
+                    if (year === 1950) {
+                        sightingData1950 = sightingData1950 + 1;
+                    }
+
+                    if (year === 1960) {
+                        sightingData1960 = sightingData1960 + 1;
+                    }
+
+                    if (year === 1980) {
+                        sightingData1980 = sightingData1980 + 1;
+                    }
                 }
 
+                // console.log(sightingData1950);
+                // console.log(userInput);
 
-                // let sightings = res.data.length;
 
-                // setSightings(sightings);
-
-                // console.log(year);
+                setSightings(sightingData);
+                setSighting1950(sightingData1950);
+                setSighting1960(sightingData1960);
+                setSighting1980(sightingData1980);
 
             })
 
@@ -40,35 +66,31 @@ const ComThree = () => {
 
 
     return (
-        <div className="container-fluid componentInterior bgimage3">
+        <div className="container-fluid componentInterior3 bgimage3">
 
             <div className='row'>
-                <h3 className='graph1-heading'>Sightings in the last 5 years:</h3>
+                <h3 className='graph1-heading'>Sightings from 1950 till 2022:</h3>
 
-                <div className="exCon chart">
+                <div className="exCon chart pgThree">
                     <Line
                         data={{
-                            labels: ['2020', '2019', '2018', '2017', '2016', '2015'],
+                            labels: ['1950', '1960', '1980', userInput],
                             datasets: [{
-                                label: '# of Sightings',
-                                data: [25, 19, 3, 5, 2, 3],
+                                label: 'Number of Sightings',
+                                data: [sighting1950, sighting1960, sighting1980, sightings],
                                 backgroundColor: [
-                                    'rgba(255, 99, 132, 0.2)',
-                                    'rgba(54, 162, 235, 0.2)',
-                                    'rgba(255, 206, 86, 0.2)',
-                                    'rgba(75, 192, 192, 0.2)',
-                                    'rgba(153, 102, 255, 0.2)',
-                                    'rgba(255, 159, 64, 0.2)'
+                                    '#4DCEEA',
+                                    '#FC6161',
+                                    '#82E26A',
+                                    '#EEE85C'
                                 ],
                                 borderColor: [
-                                    'rgba(255, 99, 132, 1)',
-                                    'rgba(54, 162, 235, 1)',
-                                    'rgba(255, 206, 86, 1)',
-                                    'rgba(75, 192, 192, 1)',
-                                    'rgba(153, 102, 255, 1)',
-                                    'rgba(255, 159, 64, 1)'
+                                    '#4DCEEA',
+                                    '#EEE85C',
+                                    '#82E26A',
+                                    '#FC6161',
                                 ],
-                                borderWidth: 1
+                                borderWidth: 3
                             },
 
                             ],
@@ -81,6 +103,13 @@ const ComThree = () => {
                 </div>
 
             </div>
+
+            <row>
+                <div className='input-con'>
+                    <h4 className='input-date'>Input Date:</h4>
+                    <input className='time-input' onChange={event => setUserInput(event.target.value)} type='number'/>
+                </div>
+            </row>
 
         </div>
     );
