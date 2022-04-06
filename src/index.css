@@ -1,36 +1,41 @@
-html, body, h1, p, ul, li{
+html,
+body,
+h1,
+p,
+ul,
+li {
   margin: 0;
   padding: 0;
 }
 
-a{
+a {
   text-decoration: none;
   color: white;
 }
 
-.nav{
+.nav {
   /* width: 15%; */
   height: 35vh;
-  background-color: rgba(46, 88, 144, 0.816);
+  background-color: #5c4778;
   color: white;
   float: left;
 }
 
-.name{
+.name {
   text-align: center;
   padding-top: 0;
   margin-top: 0;
 }
 
 
-ul{
+ul {
   margin-top: 5vh;
   /* margin: 0 auto; */
   text-align: center;
 
 }
 
-li{
+li {
   display: inline;
   /* text-align: center; */
   margin-top: 3vh;
@@ -38,36 +43,38 @@ li{
   margin-right: 20%;
 }
 
-.home-heading{
-  margin-left: 23%;
+.home-heading {
+  margin-left: 24.5%;
 }
 
-.page-two{
+.page-two {
   text-align: center;
   margin: 0 auto;
 }
 
-.bgimage{
+.bgimage {
   background-image: url(../images/BG1.jpg);
   width: 100%;
-  height: 200vh;
+  height: 240vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto;
+  padding-top: 10vh;
 }
 
-.bgimage2{
+.bgimage2 {
   background-image: url(../images/BG7.jpg);
   width: 100%;
-  height: 250vh;
+  height: 230vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto;
+  padding-top: 10vh;
 }
 
-.bgimage3{
+.bgimage3 {
   background-image: url(../images/BgP3.jpg);
   width: 100%;
   height: 100vh;
@@ -75,112 +82,263 @@ li{
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto;
+  padding-top: 10vh;
 }
 
-.overlay{
+.overlay {
   width: 100%;
   height: 100vh;
   /* background-color: rgba(0, 0, 0, 0.2); */
   margin: 0 auto;
 }
 
-.logo{
+
+.logo {
   /* width: 50%; */
-  height: 15vh;
-  background-image: url(../images/LOGO4.png);
+  height: 20vh;
+  background-image: url(../images/LOGO5.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   margin: 0 auto;
-  margin-top: 3vh;
+  margin-top: 1vh;
 }
 
 
-.welcome-heading{
+.welcome-heading {
   text-align: center;
-  padding-top: 10vh;
+  padding-top: 5vh;
   color: white;
   font-size: 35pt;
 }
 
-.page-info{
+.page-info {
   text-align: center;
   padding-top: 5vh;
   color: white;
   margin: 0 auto;
 }
 
-.page-info2{
+.page-info2 {
   text-align: center;
   padding-top: 5vh;
   color: white;
   margin: 0 auto;
 }
 
-.data-info{
+.data-info {
   text-align: center;
   padding-top: 20vh;
   color: white;
 }
 
-.componentInterior{
+.about-graphs {
+  width: 30%;
+  height: 40vh;
+  background-color: #5c4778;
+  border-radius: 50px;
+  padding-top: 4vh;
+  margin-bottom: 10vh;
+  margin-left: 10%;
+  float: left;
+}
+
+.joke-con {
+  width: 45%;
+  /* margin: 0 auto; */
+  height: 40vh;
+  background-color: #5c4778;
+  border-radius: 50px;
+  padding-top: 4vh;
+  margin-bottom: 10vh;
+  /* float: left; */
+  margin-left: 45%;
+}
+
+
+
+.page2-text {
+  width: 70%;
+  height: 30vh;
+  /* background-color: #F7f7f7; */
+  float: left;
+}
+
+
+.joke {
+  color: white;
+  margin-top: 10vh;
+}
+
+
+.joke-button {
+  width: 130px;
+  height: 50px;
+  background-color: white;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+  color: #5c4778;
+  font-size: 33px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.inner-img {
+  background-image: url(../images/Page2Logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 30vh;
+  width: 30%;
+  padding-top: 3vh;
+  float: left;
+}
+
+.componentInterior {
   width: 100%;
   height: 250vh;
   background-color: #F7f7f7;
 }
 
-.componentInterior3{
+.componentInterior3 {
   width: 100%;
   height: 150vh;
   background-color: #F7f7f7;
 }
 
-.exCon{
+.exCon {
   margin-top: 50px;
-  background-color: #ffffff0e;
+  background-color: rgba(20, 20, 20, 0.094);
   color: white;
+  border-radius: 50px;
 }
 
 
 
 .chart {
-  width: 50% !important;
-  margin: 0 auto;
- 
+  width: 30% !important;
+  height: 30vh;
+  /* margin: 0 auto; */
+
 }
 
-h3{
+/* .chartThreePg3{
+  width: 30% !important;
+  height: 30vh;
+} */
+
+.graphs-top {
+  margin: 0;
+  padding: 0;
+  /* margin-bottom: 10vh; */
+  background-color: #5c4778f1;
+  height: 50vh;
+  padding-left: 60px;
+  padding-top: 45px;
+  border-radius: 50px;
+}
+
+
+
+.graphs-topCon {
+  margin-bottom: 10vh;
+  /* background-color: #ab3d3d; */
+  height: 40vh;
+  width: 98%;
+  margin-left: 30%;
+}
+
+.chartOne {
+  margin-right: 5%;
+  /* margin-left: 2px; */
+  float: left;
+}
+
+.chartThree {
+  float: left;
+  margin-left: 5%;
+}
+
+.chartThreePg3 {
+  margin-top: 50px;
+  background-color: rgba(20, 20, 20, 0.094);
+  color: white;
+  border-radius: 30px;
+  margin-bottom: 8vh;
+  margin: 0 auto;
+  width: 60% !important;
+  height: 30vh;
+}
+
+.graph-pg3-con {
+  width: 60%;
+  height: 60vh;
+  background-color: #5c4778;
+  padding-top: 70px;
+  margin: 0 auto;
+  border-radius: 50px;
+}
+
+h3 {
+  text-align: center;
+  color: white;
+}
+
+.graph1-heading {
+  /* padding-top: 2vh; */
+  color: white;
+  padding-bottom: 5vh;
+  float: left;
+  margin-left: 6%;
+  margin-right: 16%;
+}
+
+.graph2-heading {
+  /* padding-top: 2vh; */
+  color: white;
+  padding-bottom: 5vh;
+  float: left;
+  margin-right: 14%;
+}
+
+.graph3-heading {
+  /* padding-top: 5vh; */
+  color: white;
+  padding-bottom: 5vh;
+  float: left;
+}
+
+.graph-heading-pg3 {
+  color: white;
   text-align: center;
 }
 
-.graph1-heading{
-  padding-top: 10vh;
-  color: white;
-  padding-bottom: 5vh;
-}
-
-.story-container{
+.story-container {
   width: 40%;
   height: 40vh;
   margin: 0 auto;
   /* margin-left: 38%; */
-  background-color: rgba(49, 49, 49, 0.489);
+  background-color: #5c4778;
   margin-top: 10vh;
+  border-radius: 30px;
 }
 
-.random-button{
+
+.random-button {
   margin: 0 auto;
   text-align: center;
   margin-top: 3vh;
 }
 
-.story-heading{
+.story-heading {
   text-align: center;
   color: white;
   padding-top: 3vh;
 }
 
-.story{
+.story {
   text-align: center;
   color: white;
   padding-top: 3vh;
@@ -192,37 +350,178 @@ h3{
 }
 
 .story::-webkit-scrollbar {
-  display: none; /* for Chrome, Safari, and Opera */
+  display: none;
+  /* for Chrome, Safari, and Opera */
 }
 
 
-body{
-background-color: rgb(34, 34, 34);
+body {
+  background-color: rgb(34, 34, 34);
 }
 
-.pgThree{
-  margin-bottom: 8vh;
-}
 
-.input-con{
+
+.input-con {
   width: 30%;
-  height: 15vh;
+  height: 12vh;
   border-radius: 10px;
-  background-color: #f7f7f7a1;
+  background-color: rgba(20, 20, 20, 0.094);
   margin: 0 auto;
-  /* padding-top: 8vh; */
+  margin-top: 20px;
 }
 
-.time-input{
+.time-input {
   position: relative;
   display: block;
-  margin : 0 auto;
+  margin: 0 auto;
   /* padding-top: 10px; */
   text-align: center;
 }
 
-.input-date{
+.input-date {
   text-align: center;
   padding-top: 1vh;
   margin-bottom: 2vh;
+  color: white;
+}
+
+.ufo-model {
+  border-radius: 30px;
+  width: 50%;
+  height: 80vh;
+  background-color: #5c4778f1;
+  margin: 0 auto;
+  margin-top: 8vh;
+}
+
+.ufo-heading {
+  text-align: center;
+  color: white;
+  margin-top: 20vh;
+}
+
+
+.mainPage-info {
+  background-color: #5c4778;
+  height: 40vh;
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 50px;
+}
+
+
+.about-pg2 {
+  color: white;
+}
+
+
+.card-con {
+  background-color: #5c4778;
+  height: 80vh;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 50px;
+  margin-top: 10vh;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.card-con::-webkit-scrollbar {
+  display: none;
+  /* for Chrome, Safari, and Opera */
+}
+
+.input-conPg2{
+  width: 80%;
+  height: 8vh;
+  background-color: rgba(14, 14, 14, 0.154);
+  margin: 0 auto;
+  margin-top: 3vh;
+}
+
+.sighting-dets {
+  color: white;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.card-info{
+  margin-top: 8vh;
+  width: 20%;
+  height: 45vh;
+  float: left;
+  margin-left: 5%;
+  border-radius: 50px;
+  overflow: hidden;
+  background-color: rgba(14, 14, 14, 0.154);
+}
+
+.dropbtn {
+  margin-top: 10px;
+  margin-left: 100px;
+  background-color: #04AA6D;
+  color: white;
+  /* padding: px; */
+  font-size: 16px;
+  border: none;
+  width: 100px;
+  height: 30px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-flex;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+.card-heading{
+  margin-top: 25px;
+  text-align: center;
+  color: white;
+}
+
+
+.sighting-sum{
+  width: 90%;
+  height: 30vh;
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  overflow: scroll;
+  scrollbar-width: none;
+  word-break: break-all;
+  margin-top: 30px;
+}
+
+.sighting-sum::-webkit-scrollbar {
+  display: none;
+  /* for Chrome, Safari, and Opera */
 }

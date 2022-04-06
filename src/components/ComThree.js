@@ -60,6 +60,7 @@ const ComThree = () => {
                 setSighting1980(sightingData1980);
 
             })
+            
 
     });
 
@@ -68,10 +69,10 @@ const ComThree = () => {
     return (
         <div className="container-fluid componentInterior3 bgimage3">
 
-            <div className='row'>
-                <h3 className='graph1-heading'>Sightings from 1950 till 2022:</h3>
+            <div className='graph-pg3-con'>
+                <h3 className='graph-heading-pg3'>Sightings from 1950 till 2022:</h3>
 
-                <div className="exCon chart pgThree">
+                <div className="chartThreePg3">
                     <Line
                         data={{
                             labels: ['1950', '1960', '1980', userInput],
@@ -102,14 +103,14 @@ const ComThree = () => {
 
                 </div>
 
-            </div>
-
-            <row>
                 <div className='input-con'>
                     <h4 className='input-date'>Input Date:</h4>
                     <input className='time-input' onChange={event => setUserInput(event.target.value)} type='number'/>
                 </div>
-            </row>
+            </div>
+
+            
+            
 
         </div>
     );
