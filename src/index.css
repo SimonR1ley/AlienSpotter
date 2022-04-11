@@ -44,7 +44,7 @@ li {
 }
 
 .home-heading {
-  margin-left: 24.5%;
+  margin-left: 23%;
 }
 
 .page-two {
@@ -55,7 +55,7 @@ li {
 .bgimage {
   background-image: url(../images/BG1.jpg);
   width: 100%;
-  height: 240vh;
+  height: 260vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -126,11 +126,7 @@ li {
   margin: 0 auto;
 }
 
-.data-info {
-  text-align: center;
-  padding-top: 20vh;
-  color: white;
-}
+
 
 .about-graphs {
   width: 30%;
@@ -167,7 +163,7 @@ li {
 
 .joke {
   color: white;
-  margin-top: 10vh;
+  margin-top: 8vh;
 }
 
 
@@ -212,7 +208,7 @@ li {
   margin-top: 50px;
   background-color: rgba(20, 20, 20, 0.094);
   color: white;
-  border-radius: 50px;
+  border-radius: 30px;
 }
 
 
@@ -234,7 +230,7 @@ li {
   padding: 0;
   /* margin-bottom: 10vh; */
   background-color: #5c4778f1;
-  height: 50vh;
+  height: 60vh;
   padding-left: 60px;
   padding-top: 45px;
   border-radius: 50px;
@@ -274,7 +270,7 @@ li {
 
 .graph-pg3-con {
   width: 60%;
-  height: 60vh;
+  height: 70vh;
   background-color: #5c4778;
   padding-top: 70px;
   margin: 0 auto;
@@ -291,8 +287,8 @@ h3 {
   color: white;
   padding-bottom: 5vh;
   float: left;
-  margin-left: 6%;
-  margin-right: 16%;
+  margin-left: 3%;
+  margin-right: 12%;
 }
 
 .graph2-heading {
@@ -300,7 +296,7 @@ h3 {
   color: white;
   padding-bottom: 5vh;
   float: left;
-  margin-right: 14%;
+  margin-right: 9%;
 }
 
 .graph3-heading {
@@ -315,10 +311,20 @@ h3 {
   text-align: center;
 }
 
-.story-container {
+.sighting-story {
   width: 40%;
+  height: 80vh;
+  /* background-color: #04AA6D; */
+  float: left;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 10vh;
+}
+
+.story-container {
+  width: 100%;
   height: 40vh;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   /* margin-left: 38%; */
   background-color: #5c4778;
   margin-top: 10vh;
@@ -326,10 +332,32 @@ h3 {
 }
 
 
+.sighting-con {
+  width: 100%;
+  height: 20vh;
+  /* margin: 0 auto; */
+  background-color: #5c4778;
+  /* margin-top: 10vh; */
+  border-radius: 30px;
+}
+
+.data-info {
+  text-align: center;
+  padding-top: 7vh;
+  color: white;
+  font-size: 25pt;
+}
+
 .random-button {
   margin: 0 auto;
   text-align: center;
   margin-top: 3vh;
+
+}
+
+.btn {
+  background-color: #5c4778 !important;
+  border: solid #5c4778 !important;
 }
 
 .story-heading {
@@ -363,7 +391,7 @@ body {
 
 .input-con {
   width: 30%;
-  height: 12vh;
+  height: 15vh;
   border-radius: 10px;
   background-color: rgba(20, 20, 20, 0.094);
   margin: 0 auto;
@@ -371,11 +399,24 @@ body {
 }
 
 .time-input {
-  position: relative;
-  display: block;
-  margin: 0 auto;
-  /* padding-top: 10px; */
+  /* display: block; */
+  margin-left: 2%;
+  margin-right: 3%;
   text-align: center;
+  border-radius: 30px;
+  float: left;
+}
+
+.time-input3 {
+  margin: 0 auto;
+  margin-left: 15%;
+  text-align: center;
+  border-radius: 30px;
+}
+
+.date-update {
+  border-radius: 10px;
+  width: 80px;
 }
 
 .input-date {
@@ -385,25 +426,34 @@ body {
   color: white;
 }
 
+.model-con {
+  width: 40%;
+  height: 80vh;
+  border-radius: 30px;
+  background-color: #5c4778;
+  margin-top: 10vh;
+  float: left;
+}
+
 .ufo-model {
   border-radius: 30px;
-  width: 50%;
+  width: 90%;
   height: 80vh;
-  background-color: #5c4778f1;
+  /* background-color: #5c4778f1; */
   margin: 0 auto;
-  margin-top: 8vh;
+  /* margin-top: 3vh; */
 }
 
 .ufo-heading {
   text-align: center;
   color: white;
-  margin-top: 20vh;
+  /* margin-top: 20vh; */
 }
 
 
 .mainPage-info {
   background-color: #5c4778;
-  height: 40vh;
+  height: 45vh;
   width: 70%;
   margin: 0 auto;
   border-radius: 50px;
@@ -417,7 +467,7 @@ body {
 
 .card-con {
   background-color: #5c4778;
-  height: 80vh;
+  height: 90vh;
   width: 90%;
   margin: 0 auto;
   border-radius: 50px;
@@ -431,12 +481,13 @@ body {
   /* for Chrome, Safari, and Opera */
 }
 
-.input-conPg2{
+.input-conPg2 {
   width: 80%;
   height: 8vh;
   background-color: rgba(14, 14, 14, 0.154);
   margin: 0 auto;
   margin-top: 3vh;
+  padding-top: 15px;
 }
 
 .sighting-dets {
@@ -445,12 +496,12 @@ body {
   padding-top: 50px;
 }
 
-.card-info{
+.card-info {
   margin-top: 8vh;
   width: 20%;
   height: 45vh;
   float: left;
-  margin-left: 5%;
+  margin-left: 4%;
   border-radius: 50px;
   overflow: hidden;
   background-color: rgba(14, 14, 14, 0.154);
@@ -480,7 +531,7 @@ body {
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -493,23 +544,29 @@ body {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
 
 
-.card-heading{
+.card-heading {
   margin-top: 25px;
   text-align: center;
   color: white;
 }
 
 
-.sighting-sum{
+.sighting-sum {
   width: 90%;
   height: 30vh;
   color: white;
@@ -524,4 +581,25 @@ body {
 .sighting-sum::-webkit-scrollbar {
   display: none;
   /* for Chrome, Safari, and Opera */
+}
+
+
+.instructions {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 20vh;
+  display: block;
+  background-color: #ec6464;
+  height: 7vh;
+  padding-top: 1vh;
+  width: 50%;
+  border-radius: 30px;
+}
+
+.list-no-sightings{
+  float: right;
+  color: white;
+  margin-right: 2%;
+  font-size: 15pt;
+  font-weight: bold;
 }

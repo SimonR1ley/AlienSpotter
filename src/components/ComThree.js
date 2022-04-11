@@ -105,7 +105,7 @@ const ComThree = () => {
 
                 <div className='input-con'>
                     <h4 className='input-date'>Input Date:</h4>
-                    <input className='time-input' onChange={event => setUserInput(event.target.value)} type='number'/>
+                    <input className='time-input3' onChange={event => setUserInput(event.target.value)} type='number'/>
                 </div>
             </div>
 

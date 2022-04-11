@@ -4,12 +4,18 @@ import { Bar, Pie, PolarArea } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { useEffect, useState } from "react";
 import axios from 'axios';
-import $ from 'jquery';
+// import $ from 'jquery';
 import TableItem from './TableItem';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const ComTwo = () => {
+
+
+    // $(".date-update").onClick(function(){
+    //     console.log("Turn Off");
+    //     $('.instructions').css('display', 'none');
+    // });
 
 
     const [sightings17, setSightings17] = useState("undefined");
@@ -28,11 +34,11 @@ const ComTwo = () => {
     const [showJoke, setShowJoke] = useState('none');
     const [hideButton, setHideButton] = useState('block');
 
-    const [sightings, setSightings] = useState("undefined");
+    const [sightings, setSightings] = useState("");
+    const [sightingsStart, setSightingsStart] = useState("");
     const [userInput, setUserInput] = useState(1950);
 
-
-
+    const [inputSightings, setInputSightings] = useState('');
 
 
 
@@ -134,7 +140,8 @@ const ComTwo = () => {
 
 
                 const sightingList = [];
-                const listSightings = [];
+                const startSightings = [];
+
 
                 for (let i = 0; i < res.data.length; i++) {
 
@@ -145,29 +152,11 @@ const ComTwo = () => {
                         summary: res.data[i].text,
                         id: year,
                     });
-
-
-                    if (sightingList[i].id === parseInt(userInput)) {
-                        listSightings.push(sightingList[i].summary)
-                    //   console.log("bingo");  
-                    }
-
+                    
                 }
-
-                // console.log(sightingList);
-
                 
-                const listItems = listSightings.map((item) => item);
-                setSightings(listItems);
-
-                // let startItem = sightings.map();
-                // setShowMissions(startItem);
-            
-
-
-                // let startItem = listSightings.map((item) => <TableItem dets={item}  />)
-
-
+                
+                setSightings(sightingList);
             })
 
     });
@@ -184,6 +173,26 @@ const ComTwo = () => {
         setHideButton(hide)
     }
 
+
+    function updateSightings() {
+
+        // console.log(parseInt(userInput));
+
+        let startItems = sightings.filter((item) => item.id === parseInt(userInput));
+        let mapItems = startItems.map((item) => <TableItem id={item.id} sum={item.summary} />)
+
+        setSightingsStart(mapItems);
+
+        console.log(inputSightings);
+
+    }
+
+
+
+
+
+
+  
 
 
 
@@ -360,15 +369,19 @@ const ComTwo = () => {
 
 
             <div className='card-con'>
-        <h2 className='sighting-dets'>Sighting Details:</h2>
-        <div className='input-conPg2'>
-        <input className='time-input' onChange={event => setUserInput(event.target.value)} type='number'/>
-        </div>
-        <div className='card-info'>
-            <h4 className='card-heading'>Year: {userInput}</h4>
-            <p className='sighting-sum'>{sightings}</p>
-        </div>
-    </div>
+                <h2 className='sighting-dets'>Sighting Details:</h2>
+                <div className='input-conPg2'>
+                    <input className='time-input' onChange={event => setUserInput(event.target.value)} type='number' />
+                    <button className='date-update' onClick={updateSightings}>Search</button>
+                    <div className='list-no-sightings'>Number of sightings: {inputSightings}</div>
+                </div>
+                {sightingsStart}
+
+                {/* <div className='instructions'></div> */}
+
+                {/* <div className='instructions'><h3>TYPE IN A YEAR YOU WANT TO READ ABOUT</h3></div> */}
+
+            </div>
 
 
 
