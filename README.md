@@ -22,7 +22,7 @@
   <h3 align="center">Alien Spotter</h3>
 
   <p align="center">
-    A react project using the Space X Api to demonstrate data visualization using charts js  <br>
+    A react project using a UFO Sighting Api from data.world to demonstrate data visualization using charts js  <br>
     <i>This However is a template file for DV200 Students!</i> 
     
    <br />
@@ -64,12 +64,11 @@
 <!--PROJECT DESCRIPTION-->
 ## About the Project
 <!-- header image of project -->
-![image1](https://raw.githubusercontent.com/SimonR1ley/devtask/mockups/MockupOne)
-![image2]
+![image1](mockups/MockupOne.png)
 
 ### Project Description
 
-A nice introduction to this amazing project of mine.
+This app shows the number of UFO sightings from 1950 till 2022. You can also read witness sighting reports from an year you choose.
 
 ### Built With
 
@@ -115,24 +114,11 @@ Run the following in the command-line to install all the required dependencies:
 <!-- You can add the links to all of your imagery at the bottom of the file as references -->
 ## Features and Functionality
 
-<!-- note how you can use your gitHub link. Just make a path to your assets folder -->
-![image2](https://raw.githubusercontent.com/SimonR1ley/devtask/main/src/assets/mockup.jpg)
+A feature I was playing around with was adding 3d models to the page. I went onto Blender and created an abduction model which you'll see when downloading the project.
 
-### All The Latest Space X Data! 
+### All The Latest UFO Sighting Data! 
 
-Usding the Space X API, we have collected and collated all the most relevant Space X data into once seemless react experience!
-
-![image3][image3]
-### Feature 2
-
-Description of Feature
-
-![image4][image4]
-### Feature 3
-
-Description of Feature
-
-![image5][image5]
+Using the UFO Sighting API from data.world, we have collected and collated all the most relevant UFO Sighting data into once seemless react experience!
 
 
 <!-- CONCEPT PROCESS -->
@@ -200,9 +186,10 @@ What aspects of this final build contribute to the `Above And Beyond` Component 
 
 ### Mockups
 
-![image9][image9]
+![image9](mockups/MockupTwo.png)
+![image9](mockups/MockupThree.png)
 <br>
-![image10][image10]
+![image10](mockups/MockupFour.png)
 
 <!-- VIDEO DEMONSTRATION -->
 ### Video Demonstration
