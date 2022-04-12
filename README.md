@@ -154,33 +154,33 @@ From there I started adding all the things I wanted.
 
 * Utilized React `Charts.JS` dependency for Data visualization
 * Implemented Routing with `React-Router v6`.
-* API End Point: link Here 
+* API End Point: Link here(https://data.world/ck30/ufo-data-nuforc)
 * `Plugin` for this.
 * ETC.
 
 #### Highlights
 <!-- stipulated the highlight you experienced with the project -->
 * Seeing how the data gets put in a visual context.
-* What aspects did you enjoy.
+* Problem solving some isses I had, for instance I had an issue populating a section on the page that lets users read sightings from a year they picked
 
 #### Challenges
 <!-- stipulated the challenges you faced with the project and why you think you faced it or how you think you'll solve it (if not solved) -->
-* Bugs.
-* Bugs.
+* A challenge I found was finding an API that had enough comparable data. I would've liked to have an API with more data.
+* * I didn't get my Line chart working the way that I wanted. I wanted it to be a little more customizable but struggled to dynamically populate the chart with the information.
 
 
 #### Above And Beyond
 
 What aspects of this final build contribute to the `Above And Beyond` Component of your brief?
 <!-- what did you learn outside of the classroom and implement into your project-->
-* Name of Skill Explored.
-* Explain your understanding and execution of above skill.
+* I explored react-three to import my 3d model. It was really understandable and quite simple to implement once I understood.
+* React-three is a React renderer for threejs. You convert your 3d model using your terminal, once your model is converted it gives you a js file. From there you add a canvas and specify the lighting, zoom controls and orientation of your 3d object. You also link your js file you get when you convert your 3d model.
 
 ### Future Implementation
 <!-- stipulate functionality and improvements that can be implemented in the future. -->
 
-* Future 1.
-* Future 2.
+* Getting my line chart working the way I wanted it too.
+* Updating the look of the front end. But I think I'll find an API that has more data so that I can add more comparable sections and fill up the pages a little more.
 
 <!-- MOCKUPS -->
 ## Final Outcome
@@ -192,20 +192,11 @@ What aspects of this final build contribute to the `Above And Beyond` Component 
 <br>
 ![image8](mockups/MockupFour.png)
 
-<!-- VIDEO DEMONSTRATION -->
-### Video Demonstration
-
-To see a run through of the application, click below:
-
-[View Demonstration](path/to/video/demonstration)
-
-
-See the [open issues](https://github.com/SimonR1ley/devtask/issues) for a list of proposed features (and known issues).
 
 <!-- AUTHORS -->
 ## Authors
 
-* **Your Name & Surname** - [SimonR1ley](https://github.com/SimonR1ley)
+* **Simon Riley** - [SimonR1ley](https://github.com/SimonR1ley)
 
 <!-- LICENSE -->
 ## License
@@ -215,15 +206,11 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 <!-- LICENSE -->
 ## Contact
 
-* **Your Name & Surname** - [email@address](mailto:email@address) - [@instagram_handle](https://www.instagram.com/instagram_handle/) 
+* **Simon Riley** - [170044@virtualwindow.co.za](170044@virtualwindow.co.za) - [@simonbrettriley](https://www.instagram.com/instagram_handle/) 
 * **Project Link** - https://github.com/SimonR1ley/devtask
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 <!-- all resources that you used and Acknowledgements here -->
-* [Resource Name](path/to/resource)
-* [Resource Name](path/to/resource)
-* [Resource Name](path/to/resource)
-* [Resource Name](path/to/resource)
-* [Resource Name](path/to/resource)
+* [React Three](https://www.npmjs.com/package/@react-three/fiber)
 
