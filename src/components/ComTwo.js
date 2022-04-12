@@ -352,7 +352,8 @@ const ComTwo = () => {
 
 
             <div className='about-graphs'>
-                <h3 className='about-pg2'>Information</h3>
+                <h3 className='about-pg2'>About This Page</h3>
+                <p className='about'>This page shows data from the most seen UFO shapes and sighting date. Further down you can read peoples sighting reports from a year that you choose.</p>
             </div>
 
             <div className='joke-con'>

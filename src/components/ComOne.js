@@ -51,7 +51,7 @@ const ComOne = () => {
                     <div className="mainPage-info">
                         <h1 className='col-12 welcome-heading'>Welcome To Alien Spotter</h1>
                         <p className='col-6 page-info'>Here you'll get real information on sightings of UFOs across the globe.</p>
-                        <p className="page-info">The Information page has data on the most seen UFO shapes and sighting numbers from 2016-2021</p>
+                        <p className="page-info">The Information page has data on the most seen UFO shapes and most seen sighting numbers for the last 5 and 10 years.</p>
                         <p className="page-info">The Timeline page has information on the amount of sightings from 1950 till a year that you set.</p>
                     </div>
 
