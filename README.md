@@ -23,7 +23,6 @@
 
   <p align="center">
     A react project using a UFO Sighting Api from data.world to demonstrate data visualization using charts js  <br>
-    <i>This However is a template file for DV200 Students!</i> 
     
    <br />
    <br />
@@ -73,8 +72,8 @@ This app shows the number of UFO sightings from 1950 till 2022. You can also rea
 ### Built With
 
 * [React](https://reactjs.org/)
-* [Technology Name](path/to/technology/website)
-* [Technology Name](path/to/technology/website)
+* [ChartJS](https://www.chartjs.org/)
+* [React Three](https://www.npmjs.com/package/@react-three/fiber)
 
 <!-- GETTING STARTED -->
 <!-- Make sure to add appropriate information about what prerequesite technologies the user would need and also the steps to install your project on their own mashines -->
@@ -128,24 +127,26 @@ Using the UFO Sighting API from data.world, we have collected and collated all t
 
 The `Conceptual Process` is the set of actions, activities and research that was done when starting this project.
 
-### Ideation
-
-![image5][image5]
-<br>
-![image6][image6]
-
 ### Wireframes
 
-![image7][image7]
+![image2](wireframes/WireframeOne.png)
+![image3](wireframes/WireframeTwo.png)
+![image4](wireframes/WireframeThree.png)
 
 ### Custom UI
 
-![image8][image8]
+![image5](mockups/CustomUI.png)
 
 <!-- DEVELOPMENT PROCESS -->
 ## Development Process
 
 The `Development Process` is the technical implementations and functionality done in the frontend and backend of the application.
+
+I started off this project looking for an API that was intristing and different. I looked through a number of APIs before comming across data.world. The problem with data.world is that there is no endpoint. I downloaded the JSON file and sorted the data then called it through axios.
+
+I then did some very basic wireframing to get a feel for where I wanted to display my charts and data.
+
+From there I started adding all the things I wanted.
 
 ### Implementation Process
 <!-- stipulate all of the functionality you included in the project -->
@@ -159,7 +160,7 @@ The `Development Process` is the technical implementations and functionality don
 
 #### Highlights
 <!-- stipulated the highlight you experienced with the project -->
-* What was good about this project, what did you learn.
+* Seeing how the data gets put in a visual context.
 * What aspects did you enjoy.
 
 #### Challenges
@@ -186,10 +187,10 @@ What aspects of this final build contribute to the `Above And Beyond` Component 
 
 ### Mockups
 
-![image9](mockups/MockupTwo.png)
-![image9](mockups/MockupThree.png)
+![image6](mockups/MockupTwo.png)
+![image7](mockups/MockupThree.png)
 <br>
-![image10](mockups/MockupFour.png)
+![image8](mockups/MockupFour.png)
 
 <!-- VIDEO DEMONSTRATION -->
 ### Video Demonstration
