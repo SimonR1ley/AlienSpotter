@@ -13,12 +13,18 @@ a {
   color: white;
 }
 
+body{
+  background-color: #463759 !important;
+}
+
 .nav {
   /* width: 15%; */
   height: 35vh;
-  background-color: #5c4778;
+  background-color: #242424;
+  /* background-color: rgba(46, 88, 144, 0.816); */
   color: white;
   float: left;
+  margin-bottom: 15vh !important;
 }
 
 .name {
@@ -53,7 +59,8 @@ li {
 }
 
 .bgimage {
-  background-image: url(../images/BG1.jpg);
+  /* background-image: url(../images/BG1.jpg); */
+  background-color: #463759;
   width: 100%;
   height: 260vh;
   background-position: center;
@@ -64,7 +71,8 @@ li {
 }
 
 .bgimage2 {
-  background-image: url(../images/BG7.jpg);
+  /* background-image: url(../images/BG7.jpg); */
+  background-color: #463759;
   width: 100%;
   height: 230vh;
   background-position: center;
@@ -75,7 +83,8 @@ li {
 }
 
 .bgimage3 {
-  background-image: url(../images/BgP3.jpg);
+  /* background-image: url(../images/BgP3.jpg); */
+  background-color: #463759;
   width: 100%;
   height: 100vh;
   background-position: center;
@@ -131,7 +140,7 @@ li {
 .about-graphs {
   width: 30%;
   height: 40vh;
-  background-color: #5c4778;
+  background-color: #242424;
   border-radius: 50px;
   padding-top: 4vh;
   margin-bottom: 10vh;
@@ -143,7 +152,7 @@ li {
   width: 45%;
   /* margin: 0 auto; */
   height: 40vh;
-  background-color: #5c4778;
+  background-color: #242424;
   border-radius: 50px;
   padding-top: 4vh;
   margin-bottom: 10vh;
@@ -182,7 +191,7 @@ li {
 }
 
 .inner-img {
-  background-image: url(../images/Page2Logo.png);
+  background-image: url(../images/Page2Logo2.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -214,36 +223,88 @@ li {
 
 
 .chart {
-  width: 30% !important;
-  height: 30vh;
+  width: 50% !important;
+  height: 40vh;
   /* margin: 0 auto; */
 
 }
 
-/* .chartThreePg3{
+.chartThreePg3{
   width: 30% !important;
   height: 30vh;
-} */
+}
 
 .graphs-top {
   margin: 0;
   padding: 0;
   /* margin-bottom: 10vh; */
-  background-color: #5c4778f1;
-  height: 60vh;
+  background-color: #242424;
+  height: 70vh;
   padding-left: 60px;
   padding-top: 45px;
   border-radius: 50px;
+  margin-bottom: 5vh;
 }
 
 
 
-.graphs-topCon {
-  margin-bottom: 10vh;
+/* .graphs-topCon { */
+  /* float: left; */
+  /* margin-bottom: 10vh; */
   /* background-color: #ab3d3d; */
-  height: 40vh;
-  width: 98%;
-  margin-left: 30%;
+  /* height: 40vh; */
+  /* width: 50%; */
+  /* margin-left: 30%; */
+/* } */
+
+
+.perc-rowOne{
+margin-top: 3vh;
+/* margin-bottom: 5vh; */
+/* background-color: #04AA6D; */
+width: 45%;
+height: 11vh;
+float: left;
+}
+
+.perc-rowTwo{
+  margin-top: 2vh;
+/* margin-bottom: 5vh; */
+/* background-color: #04AA6D; */
+width: 45%;
+height: 11vh;
+float: left;
+}
+
+.perc{
+  /* margin-top: 15vh; */
+  width: 15%;
+  /* background-color: #04AA6D; */
+  float: left;
+  margin-right: 1%;
+  border-right: solid white 3px;
+}
+
+
+.perc-name{
+  text-align: center;
+  margin-top: 0;
+  color: white;
+}
+
+.shape-perc{
+  text-align: center;
+  color: white;
+  margin-bottom: 0;
+  /* float: left; */
+
+}
+
+.perc-heading{
+  color: white;
+  padding-top: 10vh;
+  padding-left: 1%;
+  float: left;
 }
 
 .chartOne {
@@ -252,9 +313,14 @@ li {
   float: left;
 }
 
+.chartTwo{
+  margin: 0 auto;
+}
+
 .chartThree {
-  float: left;
-  margin-left: 5%;
+  margin: 0 auto;
+  width: 60% !important;
+  height: 45vh;
 }
 
 .chartThreePg3 {
@@ -271,7 +337,7 @@ li {
 .graph-pg3-con {
   width: 60%;
   height: 70vh;
-  background-color: #5c4778;
+  background-color: #242424;
   padding-top: 70px;
   margin: 0 auto;
   border-radius: 50px;
@@ -283,27 +349,21 @@ h3 {
 }
 
 .graph1-heading {
-  /* padding-top: 2vh; */
+  text-align: center;
   color: white;
   padding-bottom: 5vh;
-  float: left;
-  margin-left: 3%;
-  margin-right: 12%;
 }
 
 .graph2-heading {
-  /* padding-top: 2vh; */
+  text-align: center;
   color: white;
   padding-bottom: 5vh;
-  float: left;
-  margin-right: 9%;
 }
 
 .graph3-heading {
-  /* padding-top: 5vh; */
+  text-align: center;
   color: white;
   padding-bottom: 5vh;
-  float: left;
 }
 
 .graph-heading-pg3 {
@@ -326,7 +386,7 @@ h3 {
   height: 40vh;
   /* margin: 0 auto; */
   /* margin-left: 38%; */
-  background-color: #5c4778;
+  background-color: #242424;
   margin-top: 10vh;
   border-radius: 30px;
 }
@@ -336,7 +396,7 @@ h3 {
   width: 100%;
   height: 20vh;
   /* margin: 0 auto; */
-  background-color: #5c4778;
+  background-color: #242424;
   /* margin-top: 10vh; */
   border-radius: 30px;
 }
@@ -356,14 +416,15 @@ h3 {
 }
 
 .btn {
-  background-color: #5c4778 !important;
-  border: solid #5c4778 !important;
+  background-color: #242424 !important;
+  border: solid #242424 !important;
 }
 
 .story-heading {
-  text-align: center;
+  text-align: center !important;
   color: white;
   padding-top: 3vh;
+  margin: 0 auto;
 }
 
 .story {
@@ -384,7 +445,7 @@ h3 {
 
 
 body {
-  background-color: rgb(34, 34, 34);
+  background-color: rgb(46, 46, 46) !important;
 }
 
 
@@ -430,7 +491,7 @@ body {
   width: 40%;
   height: 80vh;
   border-radius: 30px;
-  background-color: #5c4778;
+  background-color: #242424;
   margin-top: 10vh;
   float: left;
 }
@@ -452,7 +513,7 @@ body {
 
 
 .mainPage-info {
-  background-color: #5c4778;
+  background-color: #242424;
   height: 45vh;
   width: 70%;
   margin: 0 auto;
@@ -466,7 +527,7 @@ body {
 
 
 .card-con {
-  background-color: #5c4778;
+  background-color: #242424;
   height: 90vh;
   width: 90%;
   margin: 0 auto;
@@ -589,7 +650,7 @@ body {
   text-align: center;
   margin-top: 20vh;
   display: block;
-  background-color: #ec6464;
+  background-color: #1f1f1f;
   height: 7vh;
   padding-top: 1vh;
   width: 50%;

@@ -12,12 +12,13 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 const ComTwo = () => {
 
 
-    // $(".date-update").onClick(function(){
-    //     console.log("Turn Off");
-    //     $('.instructions').css('display', 'none');
-    // });
 
 
+
+    const [sightings13, setSightings13] = useState("undefined");
+    const [sightings14, setSightings14] = useState("undefined");
+    const [sightings15, setSightings15] = useState("undefined");
+    const [sightings16, setSightings16] = useState("undefined");
     const [sightings17, setSightings17] = useState("undefined");
     const [sightings18, setSightings18] = useState("undefined");
     const [sightings19, setSightings19] = useState("undefined");
@@ -30,6 +31,11 @@ const ComTwo = () => {
     const [fireball, setFireball] = useState("");
     const [sphere, setSphere] = useState("");
     const [light, setLight] = useState("");
+    const [formation, setFormation] = useState("");
+    const [circle, setCircle] = useState("");
+    const [disk, setDisk] = useState("");
+    const [other, setOther] = useState("");
+    const [unknown, setUnknown] = useState("");
 
     const [showJoke, setShowJoke] = useState('none');
     const [hideButton, setHideButton] = useState('block');
@@ -40,6 +46,22 @@ const ComTwo = () => {
 
     const [inputSightings, setInputSightings] = useState('');
 
+    const [hideInst, setHideInst] = useState('block');
+
+
+    const [ufos, setUfos] = useState("Loading Data");
+
+    const [percentageOne, setPercentageOne] = useState(0);
+    const [percentageTwo, setPercentageTwo] = useState(0);
+    const [percentageThree, setPercentageThree] = useState(0);
+    const [percentageFour, setPercentageFour] = useState(0);
+    const [percentageFive, setPercentageFive] = useState(0);
+    const [percentageSix, setPercentageSix] = useState(0);
+    const [percentageSeven, setPercentageSeven] = useState(0);
+    const [percentageEight, setPercentageEight] = useState(0);
+    const [percentageNine, setPercentageNine] = useState(0);
+
+
 
 
     useEffect(() => {
@@ -48,8 +70,15 @@ const ComTwo = () => {
             .then((res) => {
 
 
+                let ufos = res.data.length;
+                setUfos(ufos);
 
-                // Dates 
+
+                // Dates
+                let sightingData13 = 0;
+                let sightingData14 = 0;
+                let sightingData15 = 0;
+                let sightingData16 = 0; 
                 let sightingData17 = 0;
                 let sightingData18 = 0;
                 let sightingData19 = 0;
@@ -87,10 +116,32 @@ const ComTwo = () => {
                         sightingData17 = sightingData17 + 1;
                     }
 
+                    if (year === 2016) {
+                        sightingData16 = sightingData16 + 1;
+                    }
+
+                    if (year === 2015) {
+                        sightingData15 = sightingData15 + 1;
+                    }
+
+                    if (year === 2014) {
+                        sightingData14 = sightingData14 + 1;
+                    }
+
+                    if (year === 2013) {
+                        sightingData13 = sightingData13 + 1;
+                    }
+
+                    
+
 
 
 
                 }
+                setSightings13(sightingData13);
+                setSightings14(sightingData14);
+                setSightings15(sightingData15);
+                setSightings16(sightingData16);
                 setSightings17(sightingData17);
                 setSightings18(sightingData18);
                 setSightings19(sightingData19);
@@ -106,6 +157,11 @@ const ComTwo = () => {
                 let fireballData = 0;
                 let sphereData = 0;
                 let lightData = 0;
+                let formationtData = 0;
+                let circleData = 0;
+                let diskData = 0;
+                let otherData = 0;
+                let unknownData = 0;
 
 
                 for (let i = 0; i < res.data.length; i++) {
@@ -128,6 +184,32 @@ const ComTwo = () => {
                         lightData = lightData + 1;
                         // console.log(triangle.length);
                     }
+
+                    if (res.data[i].shape === "Formation") {
+                        formationtData = formationtData + 1;
+                        // console.log(triangle.length);
+                    }
+
+                    if (res.data[i].shape === "Circle") {
+                        circleData = circleData + 1;
+                        // console.log(triangle.length);
+                    }
+
+                    if (res.data[i].shape === "Disk") {
+                        diskData = diskData + 1;
+                        // console.log(triangle.length);
+                    }
+
+                    if (res.data[i].shape === "Other") {
+                        otherData = otherData + 1;
+                        // console.log(triangle.length);
+                    }
+
+                    if (res.data[i].shape === "Unknown") {
+                        unknownData = unknownData + 1;
+                        // console.log(triangle.length);
+                    }
+
                 }
 
 
@@ -135,6 +217,21 @@ const ComTwo = () => {
                 setFireball(fireballData);
                 setTriangle(triangleData);
                 setLight(lightData);
+                setFormation(formationtData);
+                setCircle(circleData);
+                setDisk(diskData);
+                setOther(otherData);
+                setUnknown(unknownData);
+
+
+
+
+
+
+                // console.log(persOneDisplay);
+
+
+
 
 
 
@@ -152,14 +249,67 @@ const ComTwo = () => {
                         summary: res.data[i].text,
                         id: year,
                     });
-                    
+
                 }
-                
-                
+
+
                 setSightings(sightingList);
             })
 
+
+
+        let persOne = triangle / ufos * 100;
+        let persOneDisplay = Math.round(persOne)
+
+        setPercentageOne(persOneDisplay);
+
+
+        let persTwo = fireball / ufos * 100;
+        let persTwoDisplay = Math.round(persTwo)
+
+        setPercentageTwo(persTwoDisplay);
+
+        let persThree = sphere / ufos * 100;
+        let persThreeDisplay = Math.round(persThree)
+
+        setPercentageThree(persThreeDisplay);
+
+        let persFour = light / ufos * 100;
+        let persFourDisplay = Math.round(persFour)
+
+        setPercentageFour(persFourDisplay);
+
+        let persFive = formation / ufos * 100;
+        let persFiveDisplay = Math.round(persFive)
+
+        setPercentageFive(persFiveDisplay);
+
+        let persSix = circle / ufos * 100;
+        let persSixDisplay = Math.round(persSix)
+
+        setPercentageSix(persSixDisplay);
+
+        let persSeven = disk / ufos * 100;
+        let persSevenDisplay = Math.round(persSeven)
+
+        setPercentageSeven(persSevenDisplay);
+
+        let persEight = other / ufos * 100;
+        let persEightDisplay = Math.round(persEight)
+
+        setPercentageEight(persEightDisplay);
+
+        let persNine = unknown / ufos * 100;
+        let persNineDisplay = Math.round(persNine)
+
+        setPercentageNine(persNineDisplay);
+
     });
+
+
+
+
+
 
 
 
@@ -188,16 +338,17 @@ const ComTwo = () => {
     }
 
 
+    var hideVar = '';
 
-
-
-
-  
+    function hideInstructions() {
+        hideVar = 'none';
+        setHideInst(hideVar)
+    }
 
 
 
     return (
-        <div className="container-fluid bgimage2">
+        <div className="container-fluid">
 
 
             <div className='about-graphs'>
@@ -218,59 +369,121 @@ const ComTwo = () => {
             <div className='graphs-top'>
 
                 <h3 className='graph1-heading'>Most Seen UFO Shapes:</h3>
-                <h3 className='graph2-heading'>Sightings in the last 5 years:</h3>
-                <h3 className='graph3-heading'>Sightings in the last 6 years:</h3>
 
 
-                <div className='row graphs-topCon'>
-                    <div className="exCon chart chartOne">
-                        <PolarArea
-                            data={{
-                                labels: ['Triangle', 'Fireball', 'Sphere', 'Light'],
-                                datasets: [{
-                                    label: '# of Sightings',
-                                    data: [triangle, fireball, sphere, light],
-                                    backgroundColor: [
-                                        '#F06497',
-                                        '#F5908B',
-                                        '#00B5DB',
-                                        '#FDC381',
-                                        // 'rgba(153, 102, 255, 0.2)',
-                                        // 'rgba(255, 159, 64, 0.2)'
-                                    ],
-                                    borderColor: [
-                                        'rgba(255, 99, 132, 1)',
-                                        'rgba(54, 162, 235, 1)',
-                                        'rgba(255, 206, 86, 1)',
-                                        'rgba(75, 192, 192, 1)',
-                                        // 'rgba(153, 102, 255, 1)',
-                                        // 'rgba(255, 159, 64, 1)'
-                                    ],
-                                    borderWidth: 1
-                                },
 
+                <div className="exCon chart chartOne">
+                    <Bar
+                        data={{
+                            labels: ['Triangle', 'Fireball', 'Sphere', 'Light', "Formation", "Circle", "Disk", "Other", "Unknown"],
+                            datasets: [{
+                                label: '# of Sightings',
+                                data: [triangle, fireball, sphere, light, formation, circle, disk, other, unknown],
+                                backgroundColor: [
+                                    '#FC6161',
+                                    '#4DCEEA',
+                                    '#EEE85C',
+                                    '#82E26A',
+                                    '#E15CF6',
+                                    '#F6945C'
                                 ],
-                            }}
-                            height={200}
-                            width={300}
-                            options={{
-                                maintainAspectRatio: false, scales: {
-                                    x: {
-                                        ticks: {
-                                            color: 'white'
-                                        }
-                                    },
-                                    y: {
-                                        ticks: {
-                                            color: 'white'
-                                        }
+                                borderColor: [
+                                    '#FC6161',
+                                    '#4DCEEA',
+                                    '#EEE85C',
+                                    '#82E26A',
+                                    '#E15CF6',
+                                    '#F6945C'
+                                ],
+                                borderWidth: 1
+                            },
+
+                            ],
+                        }}
+                        height={400}
+                        width={700}
+                        options={{
+                            maintainAspectRatio: false, scales: {
+                                x: {
+                                    ticks: {
+                                        color: 'white'
+                                    }
+                                },
+                                y: {
+                                    ticks: {
+                                        color: 'white'
                                     }
                                 }
                             }
-                            }
-                        />
+                        }
+                        }
+                    />
 
+                </div>
+
+                        <h4 className='perc-heading'>Percentage of UFO shapes seen:</h4>
+
+                <div className='perc-rowOne'>
+
+                    <div className='perc'>
+                        <h2 className='shape-perc'>{percentageOne}%</h2>
+                        <p className='perc-name'>Triangle</p>
                     </div>
+
+                    <div className='perc'>
+                        <h2 className='shape-perc'>{percentageTwo}%</h2>
+                        <p className='perc-name'>Fireball</p>
+                    </div>
+
+                    <div className='perc'>
+                        <h2 className='shape-perc'>{percentageThree}%</h2>
+                        <p className='perc-name'>Sphere</p>
+                    </div>
+
+                    <div className='perc'>
+                        <h2 className='shape-perc'>{percentageFour}%</h2>
+                        <p className='perc-name'>Light</p>
+                    </div>
+
+                </div>     
+
+                    <div className='perc-rowTwo'>
+
+                    <div className='perc'>
+                        <h2 className='shape-perc'>{percentageFive}%</h2>
+                        <p className='perc-name'>Formation</p>
+                    </div>
+
+                    <div className='perc'>
+                        <h2 className='shape-perc'>{percentageSix}%</h2>
+                        <p className='perc-name'>Circle</p>
+                    </div>
+
+                    <div className='perc'>
+                        <h2 className='shape-perc'>{percentageSeven}%</h2>
+                        <p className='perc-name'>Disk</p>
+                    </div>
+
+                    <div className='perc'>
+                        <h2 className='shape-perc'>{percentageEight}%</h2>
+                        <p className='perc-name'>Other</p>
+                    </div>
+
+                    <div className='perc'>
+                        <h2 className='shape-perc'>{percentageNine}%</h2>
+                        <p className='perc-name'>Unkown</p>
+                    </div>
+
+                </div>     
+
+
+
+
+                </div>
+
+                <div className='graphs-top'>
+
+                    <h3 className='graph2-heading'>Sightings in the last 5 years:</h3>
 
                     <div className="exCon chart chartTwo">
                         <Pie
@@ -288,12 +501,12 @@ const ComTwo = () => {
                                         '#F6945C'
                                     ],
                                     borderColor: [
-                                        'rgba(255, 99, 132, 1)',
-                                        'rgba(54, 162, 235, 1)',
-                                        'rgba(255, 206, 86, 1)',
-                                        'rgba(75, 192, 192, 1)',
-                                        'rgba(153, 102, 255, 1)',
-                                        'rgba(255, 159, 64, 1)'
+                                        '#FC6161',
+                                        '#4DCEEA',
+                                        '#EEE85C',
+                                        '#82E26A',
+                                        '#E15CF6',
+                                        '#F6945C'
                                     ],
                                     borderWidth: 1
                                 },
@@ -317,13 +530,20 @@ const ComTwo = () => {
 
                     </div>
 
-                    <div className="exCon chart chartThree">
-                        <Bar
+                </div>
+
+
+                <div className='graphs-top'>
+
+                    <h3 className='graph3-heading'>Sightings in the last 10 years:</h3>
+
+                    <div className="chartThree">
+                        <PolarArea
                             data={{
-                                labels: ['2022', '2021', '2020', '2019', '2018', '2017'],
+                                labels: ['2022', '2021', '2020', '2019', '2018', '2017', '2016', '2015', '2014', '2013'],
                                 datasets: [{
                                     label: '# of Sightings',
-                                    data: [sightings22, sightings21, sightings20, sightings19, sightings18, sightings17],
+                                    data: [sightings22, sightings21, sightings20, sightings19, sightings18, sightings17, sightings16, sightings15, sightings14, sightings13],
                                     backgroundColor: [
                                         '#FC6161',
                                         '#4DCEEA',
@@ -333,24 +553,29 @@ const ComTwo = () => {
                                         '#F6945C'
                                     ],
                                     borderColor: [
-                                        'rgba(255, 99, 132, 1)',
-                                        'rgba(54, 162, 235, 1)',
-                                        'rgba(255, 206, 86, 1)',
-                                        'rgba(75, 192, 192, 1)',
-                                        'rgba(153, 102, 255, 1)',
-                                        'rgba(255, 159, 64, 1)'
+                                        '#FC6161',
+                                        '#4DCEEA',
+                                        '#EEE85C',
+                                        '#82E26A',
+                                        '#E15CF6',
+                                        '#F6945C'
                                     ],
                                     borderWidth: 1
                                 },
 
                                 ],
                             }}
-                            height={300}
-                            width={700}
+                            height={400}
+                            width={800}
                             options={{
                                 maintainAspectRatio: false,
                                 scales: {
                                     y: {
+                                        ticks: {
+                                            color: 'white'
+                                        }
+                                    },
+                                    x: {
                                         ticks: {
                                             color: 'white'
                                         }
@@ -362,36 +587,33 @@ const ComTwo = () => {
 
                     </div>
 
+                </div>
 
+
+                <div className='card-con'>
+                    <h2 className='sighting-dets'>Sighting Details:</h2>
+                    <div className='input-conPg2'>
+                        <input className='time-input' onChange={event => setUserInput(event.target.value)} type='number' />
+                        <button className='date-update' onClick={() => { updateSightings(); hideInstructions(); }}>Search</button>
+                        <div className='list-no-sightings'>Number of sightings: {inputSightings}</div>
+                    </div>
+                    {sightingsStart}
+
+                    {/* <div className='instructions'></div> */}
+
+                    <div className='instructions' style={{ display: hideInst }}><h3>TYPE IN A YEAR YOU WANT TO READ ABOUT</h3></div>
 
                 </div>
+
+
+
             </div>
 
 
-            <div className='card-con'>
-                <h2 className='sighting-dets'>Sighting Details:</h2>
-                <div className='input-conPg2'>
-                    <input className='time-input' onChange={event => setUserInput(event.target.value)} type='number' />
-                    <button className='date-update' onClick={updateSightings}>Search</button>
-                    <div className='list-no-sightings'>Number of sightings: {inputSightings}</div>
-                </div>
-                {sightingsStart}
-
-                {/* <div className='instructions'></div> */}
-
-                {/* <div className='instructions'><h3>TYPE IN A YEAR YOU WANT TO READ ABOUT</h3></div> */}
-
-            </div>
-
-
-
-        </div>
-
-
-    );
+            );
 }
 
-export default ComTwo;
+            export default ComTwo;
 
 
 

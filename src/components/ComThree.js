@@ -1,6 +1,6 @@
 import 'chart.js/auto';
 import React from "react";
-import {Line} from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
 import { useEffect, useState } from "react";
 import axios from 'axios';
 
@@ -10,8 +10,24 @@ const ComThree = () => {
     const [sighting1950, setSighting1950] = useState("undefined");
     const [sighting1960, setSighting1960] = useState("undefined");
     const [sighting1980, setSighting1980] = useState("undefined");
-    const [sightings, setSightings] = useState("undefined");
+    const [sightings, setSightings] = useState([]);
     const [userInput, setUserInput] = useState("undefined");
+
+
+    const [yearNum, setYearNum] = useState([]);
+
+    const yearArray = [];
+    const newYearArray = [];
+
+
+    const [uniqueYear, setUniqueYear] = useState("undefined");
+
+
+    function getUniqueVal(value, index, self) {
+        return self.indexOf(value) === index;
+    }
+
+    let sightingData = [];
 
 
     useEffect(() => {
@@ -19,55 +35,86 @@ const ComThree = () => {
         axios.get('data.json')
             .then((res) => {
 
-                let sightingData = 0;
-                let sightingData1950 = 0;
-                let sightingData1960 = 0;
-                let sightingData1980 = 0;
+                let year = 0;
+                // let sightingData1950 = 0;
+                // let sightingData1960 = 0;
+                // let sightingData1980 = 0;
                 // var inputYear = 
 
 
                 for (let i = 0; i < res.data.length; i++) {
 
                     var dateSnip = new Date(res.data[i].date_time);
-                    var year = dateSnip.getFullYear();
+                    year = dateSnip.getFullYear();
 
                     // console.log(year);
 
-                    if (year === parseInt(userInput)) {
-                        sightingData = sightingData + 1;
-                    }
+                    yearArray.push(year);
 
-                    if (year === 1950) {
-                        sightingData1950 = sightingData1950 + 1;
-                    }
+                    // if (year === parseInt(userInput)) {
+                    //     sightingData = sightingData + 1;
+                    // }
 
-                    if (year === 1960) {
-                        sightingData1960 = sightingData1960 + 1;
-                    }
+                    // if (year === 1950) {
+                    //     sightingData1950 = sightingData1950 + 1;
+                    // }
 
-                    if (year === 1980) {
-                        sightingData1980 = sightingData1980 + 1;
-                    }
+                    // if (year === 1960) {
+                    //     sightingData1960 = sightingData1960 + 1;
+                    // }
+
+                    // if (year === 1980) {
+                    //     sightingData1980 = sightingData1980 + 1;
+                    // }
+                }
+                
+                // setSighting1950(sightingData1950);
+                // setSighting1960(sightingData1960);
+                // setSighting1980(sightingData1980);
+
+
+
+
+
+
+
+                var newArr = yearArray.filter(getUniqueVal);
+                newYearArray.push(newArr);
+
+
+                
+
+                for (let i = 0; i < yearArray.length; i++) {
+                    for(let j = 0; j < newArr.length; j++){
+
+                        if(newArr[j] === yearArray[i]){
+                            sightingData.push(newArr[j]);
+
+                        }
+                    } 
                 }
 
-                // console.log(sightingData1950);
-                // console.log(userInput);
-
-
-                setSightings(sightingData);
-                setSighting1950(sightingData1950);
-                setSighting1960(sightingData1960);
-                setSighting1980(sightingData1980);
-
             })
+
+
+         
             
 
-    });
+        setYearNum(newYearArray);
+        setSightings(sightingData);
+  
+
+        console.log(sightings);
+
+    }, []);
+
+
+
 
 
 
     return (
-        <div className="container-fluid componentInterior3 bgimage3">
+        <div className="container-fluid">
 
             <div className='graph-pg3-con'>
                 <h3 className='graph-heading-pg3'>Sightings from 1950 till 2022:</h3>
@@ -75,10 +122,10 @@ const ComThree = () => {
                 <div className="chartThreePg3">
                     <Line
                         data={{
-                            labels: ['1950', '1960', '1980', userInput],
+                            labels: [yearNum],
                             datasets: [{
                                 label: 'Number of Sightings',
-                                data: [sighting1950, sighting1960, sighting1980, sightings],
+                                data: [sightings],
                                 backgroundColor: [
                                     '#4DCEEA',
                                     '#FC6161',
@@ -96,21 +143,21 @@ const ComThree = () => {
 
                             ],
                         }}
-                        height={400}
-                        width={600}
-                        options={{ maintainAspectRatio: false, }}
+                        height={300}
+                        width={500}
+                        options={{ maintainAspectRatio: false }}
                     />
 
                 </div>
 
                 <div className='input-con'>
                     <h4 className='input-date'>Input Date:</h4>
-                    <input className='time-input3' onChange={event => setUserInput(event.target.value)} type='number'/>
+                    <input className='time-input3' onChange={event => setUserInput(event.target.value)} type='number' />
                 </div>
             </div>
 
-            
-            
+
+
 
         </div>
     );
@@ -118,4 +165,3 @@ const ComThree = () => {
 
 export default ComThree;
 
-     

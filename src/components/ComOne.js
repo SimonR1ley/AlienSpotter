@@ -46,7 +46,7 @@ const ComOne = () => {
     return (
         <div className='container-fluid'>
             <div className="row">
-                <div className='col-12 bgimage'>
+                <div className='col-12'>
 
                     <div className="mainPage-info">
                         <h1 className='col-12 welcome-heading'>Welcome To Alien Spotter</h1>
