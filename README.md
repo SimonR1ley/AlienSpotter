@@ -2,24 +2,24 @@
 <!-- Repository Information & Links-->
 <br />
 
-![GitHub repo size](https://img.shields.io/github/repo-size/MikeMaynard14/termoneexample)
-![GitHub watchers](https://img.shields.io/github/watchers/MikeMaynard14/termoneexample)
-![GitHub language count](https://img.shields.io/github/languages/count/MikeMaynard14/termoneexample)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/MikeMaynard14/termoneexample)
+![GitHub repo size](https://img.shields.io/github/repo-size/SimonR1ley/devtask)
+![GitHub watchers](https://img.shields.io/github/watchers/SimonR1ley/devtask)
+![GitHub language count](https://img.shields.io/github/languages/count/SimonR1ley/devtask)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/SimonR1ley/devtask)
 
 
 <!-- HEADER SECTION -->
-<h5 align="center" style="padding:0;margin:0;">Mike Maynard</h5>
-<h5 align="center" style="padding:0;margin:0;">110185</h5>
+<h5 align="center" style="padding:0;margin:0;">Simon Riley</h5>
+<h5 align="center" style="padding:0;margin:0;">170044</h5>
 <h6 align="center">DV200 - Term 1 | 2022</h6>
 </br>
 <p align="center">
 
-  <a href="https://github.com/MikeMaynard14/termoneexample">
-    <img src="src/assets/mascot.svg" alt="Logo" width="140" height="140">
+  <a href="https://github.com/SimonR1ley/devtask">
+    <img src="images/LOGO5.png" alt="Logo" width="140" height="140">
   </a>
   
-  <h3 align="center">OpenSpace</h3>
+  <h3 align="center">Alien Spotter</h3>
 
   <p align="center">
     A react project using the Space X Api to demonstrate data visualization using charts js  <br>
@@ -29,9 +29,9 @@
    <br />
    <a href="path/to/demonstration/video">View Demo</a>
     ·
-    <a href="https://github.com/MikeMaynard14/termoneexample/issues">Report Bug</a>
+    <a href="https://github.com/SimonR1ley/devtask/issues">Report Bug</a>
     ·
-    <a href="https://github.com/MikeMaynard14/termoneexample/issues">Request Feature</a>
+    <a href="https://github.com/SimonR1ley/devtask/issues">Request Feature</a>
 </p>
 <!-- TABLE OF CONTENTS -->
 
@@ -64,7 +64,8 @@
 <!--PROJECT DESCRIPTION-->
 ## About the Project
 <!-- header image of project -->
-![image1][image1]
+![image1](https://raw.githubusercontent.com/SimonR1ley/devtask/mockups/MockupOne)
+![image2]
 
 ### Project Description
 
@@ -92,12 +93,12 @@ Ensure that you have the latest version of [NPM](https://www.npmjs.com/) install
 Here are a couple of ways to clone this repo:
 
 1. GitHub Desktop </br>
-Enter `https://github.com/MikeMaynard14/termoneexample.git` into the URL field and press the `Clone` button.
+Enter `https://github.com/SimonR1ley/devtask.git` into the URL field and press the `Clone` button.
 
 2. Clone Repository </br>
 Run the following in the command-line to clone the project:
    ```sh
-   git clone https://github.com/MikeMaynard14/termoneexample.git
+   git clone https://github.com/SimonR1ley/devtask.git
    ```
     Open `Software` and select `File | Open...` from the menu. Select cloned directory and press `Open` button
 
@@ -115,7 +116,7 @@ Run the following in the command-line to install all the required dependencies:
 ## Features and Functionality
 
 <!-- note how you can use your gitHub link. Just make a path to your assets folder -->
-![image2](https://raw.githubusercontent.com/MikeMaynard14/termoneexample/main/src/assets/mockup.jpg)
+![image2](https://raw.githubusercontent.com/SimonR1ley/devtask/main/src/assets/mockup.jpg)
 
 ### All The Latest Space X Data! 
 
@@ -211,12 +212,12 @@ To see a run through of the application, click below:
 [View Demonstration](path/to/video/demonstration)
 
 
-See the [open issues](https://github.com/MikeMaynard14/termoneexample/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/SimonR1ley/devtask/issues) for a list of proposed features (and known issues).
 
 <!-- AUTHORS -->
 ## Authors
 
-* **Your Name & Surname** - [MikeMaynard14](https://github.com/MikeMaynard14)
+* **Your Name & Surname** - [SimonR1ley](https://github.com/SimonR1ley)
 
 <!-- LICENSE -->
 ## License
@@ -227,7 +228,7 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 ## Contact
 
 * **Your Name & Surname** - [email@address](mailto:email@address) - [@instagram_handle](https://www.instagram.com/instagram_handle/) 
-* **Project Link** - https://github.com/MikeMaynard14/termoneexample
+* **Project Link** - https://github.com/SimonR1ley/devtask
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
